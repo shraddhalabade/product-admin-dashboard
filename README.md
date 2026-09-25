@@ -1,36 +1,168 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Product Admin Dashboard
+
+A responsive Product Admin Dashboard built as a frontend assignment using Next.js, React, Tailwind CSS, Axios, and the DummyJSON API.
+
+## Tech Stack
+
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+* Axios
+* DummyJSON API
+* LocalStorage
+* Git & GitHub
+
+## Features
+
+### Authentication
+
+* Login page with validation and error handling
+* Protected product pages
+* Logout functionality
+* Unauthenticated users cannot access the product dashboard
+
+### Product Management
+
+* Product listing with:
+
+  * Image
+  * Title
+  * Category
+  * Price
+  * Rating
+  * Stock
+* Responsive desktop table and mobile card layout
+* Product details page
+* Add product
+* Edit product
+* Delete product
+
+### Search, Filter & Sorting
+
+* Debounced product search
+* Category filtering
+* Sort by:
+
+  * Price
+  * Rating
+  * Title
+
+### Pagination
+
+* API-based pagination using `limit` and `skip`
+* Page numbers
+* Previous/Next navigation
+* Page sizes:
+
+  * 10
+  * 20
+  * 50
+* Displays the current result range
+
+### Data Persistence
+
+DummyJSON mutation APIs simulate add, edit, and delete operations but do not permanently persist the changes after refetching.
+
+To provide a consistent working experience, locally created and modified products are stored using `localStorage` and merged with API products.
+
+## API
+
+This project uses the DummyJSON Products API:
+
+* Products: `/products`
+* Search: `/products/search?q=`
+* Categories: `/products/categories`
+* Category products: `/products/category/{category}`
+
+All API requests are handled using Axios.
+
+## Project Structure
+
+```text
+product-admin-dashboard/
+├── app/
+│   ├── login/
+│   ├── products/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+├── lib/
+├── services/
+├── public/
+├── package.json
+├── tsconfig.json
+└── README.md
+```
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/shraddhalabade/product-admin-dashboard.git
+```
+
+### 2. Open the project
+
+```bash
+cd product-admin-dashboard
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 5. Open in browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Login
 
-## Learn More
+Use the login credentials configured in the application to access the product dashboard.
 
-To learn more about Next.js, take a look at the following resources:
+After successful login, users can access the product management pages.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Responsive Design
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The dashboard is designed to work across desktop and mobile screen sizes.
 
-## Deploy on Vercel
+* Desktop: Product table
+* Mobile: Product cards
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## AI Usage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+AI tools were used as a support tool during development for debugging, implementation guidance, understanding framework issues, and improving the development workflow.
+
+The implemented functionality was integrated and tested in the project before submission.
+
+## Assignment Status
+
+Completed features:
+
+* Login and validation
+* Protected routes
+* Logout
+* Product listing
+* Responsive UI
+* Pagination
+* Debounced search
+* Category filtering
+* Sorting
+* Product details
+* Add product
+* Edit product
+* Delete product
+* Local persistence
+* Axios API integration
